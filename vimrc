@@ -22,6 +22,9 @@
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'tpope/vim-markdown'
  Bundle 'wincent/Command-T'
+ " some test
+ Bundle 'lucapette/vim-ruby-doc'
+ let g:ruby_doc_command='open'
 
 "set the color scheme
 "colorscheme slate
