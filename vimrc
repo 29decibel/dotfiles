@@ -17,7 +17,10 @@
  Bundle 'scrooloose/snipmate-snippets'
  Bundle 'kchmck/vim-coffee-script'
  Bundle 'scrooloose/nerdtree'
- " non github repos
+ Bundle 'mileszs/ack.vim'
+ Bundle 'godlygeek/tabular'
+ Bundle 'altercation/vim-colors-solarized'
+ Bundle 'tpope/vim-markdown'
  Bundle 'wincent/Command-T'
 
 "set the color scheme
