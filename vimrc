@@ -80,6 +80,8 @@ if has("gui_running")
 	set lines=999
 	set columns=999
 end
+" encoding matters
+set encoding=utf-8
 "set files
 set nocompatible
 syntax on
