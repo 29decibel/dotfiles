@@ -14,7 +14,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails.git'
 Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/snipmate-snippets'
+Bundle '29decibel/snipmate-snippets'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
@@ -22,10 +22,13 @@ Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
 Bundle 'wincent/Command-T'
-Bundle '29decibel/coffeScript-VIM-Snippets'
-" some test
+" ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
 let g:ruby_doc_command='open'
+
+" for eco snippets
+" a file can be multiple filetyles, using "." to seperate
+autocmd FileType eco set ft=eco.html
 
 "set the color scheme
 "colorscheme slate
