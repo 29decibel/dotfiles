@@ -1,30 +1,31 @@
- set nocompatible               " be iMproved
- filetype off                   " required!
+set nocompatible               " be iMproved
+filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
- " let Vundle manage Vundle
- " required! 
- Bundle 'gmarik/vundle'
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
 
- " My Bundles here:
- "
- " original repos on github
- Bundle 'tpope/vim-fugitive'
- Bundle 'tpope/vim-rails.git'
- Bundle 'msanders/snipmate.vim'
- Bundle 'scrooloose/snipmate-snippets'
- Bundle 'kchmck/vim-coffee-script'
- Bundle 'scrooloose/nerdtree'
- Bundle 'mileszs/ack.vim'
- Bundle 'godlygeek/tabular'
- Bundle 'altercation/vim-colors-solarized'
- Bundle 'tpope/vim-markdown'
- Bundle 'wincent/Command-T'
- " some test
- Bundle 'lucapette/vim-ruby-doc'
- let g:ruby_doc_command='open'
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails.git'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/snipmate-snippets'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/nerdtree'
+Bundle 'mileszs/ack.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-markdown'
+Bundle 'wincent/Command-T'
+Bundle '29decibel/coffeScript-VIM-Snippets'
+" some test
+Bundle 'lucapette/vim-ruby-doc'
+let g:ruby_doc_command='open'
 
 "set the color scheme
 "colorscheme slate
@@ -93,7 +94,7 @@ nmap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 "the font
 set guifont=Monaco:h14
 "map the rails project
-nmap RR :e Gemfile<CR>:Rtree<CR>
+"nmap RR :e Gemfile<CR>:Rtree<CR>
 " map for rails 
 nnoremap <leader>m :Rmodel<space>
 nnoremap <leader>c :Rcontroller<space>
