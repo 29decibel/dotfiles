@@ -1,7 +1,6 @@
 " got vundle first
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -25,7 +24,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
-Bundle 'wincent/Command-T'
+" good bye command-t thanks for the ctrlP
+" Bundle 'wincent/Command-T'
 Bundle 'kien/ctrlp.vim'
 " ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
@@ -107,15 +107,17 @@ set guifont=Monaco:h14
 nnoremap <leader>m :Rmodel<space>
 nnoremap <leader>c :Rcontroller<space>
 nnoremap <leader>v :Rview<space>
+
 " for the tmux or screen
 set ttimeoutlen=50
 set backspace=2
 
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-endif
+" if &term =~ "xterm" || &term =~ "screen"
+"   let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+"   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+"   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+" endif
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
@@ -129,3 +131,8 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" mappings for the ctrlP
+let g:ctrlp_working_path_mode = 0
+nmap <leader><leader> :CtrlP<cr>
+nmap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
