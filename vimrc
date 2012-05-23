@@ -22,6 +22,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
 Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 " ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
 let g:ruby_doc_command='open'

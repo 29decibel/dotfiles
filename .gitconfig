@@ -1,0 +1,33 @@
+[user]
+	name = 29decibel
+	email = mike.d.1984@gmail.com
+[github]
+	user = 29decibel
+	token = b8a44881a6c20756c0fdf547d0823c38
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  pl = pull origin master
+  pm = push origin master
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = cyan
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
