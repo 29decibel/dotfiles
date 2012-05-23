@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -98,7 +98,7 @@ nmap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 set guifont=Monaco:h14
 "map the rails project
 "nmap RR :e Gemfile<CR>:Rtree<CR>
-" map for rails 
+" map for rails
 nnoremap <leader>m :Rmodel<space>
 nnoremap <leader>c :Rcontroller<space>
 nnoremap <leader>v :Rview<space>
@@ -111,3 +111,16 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
