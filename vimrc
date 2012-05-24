@@ -24,8 +24,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
-" good bye command-t thanks for the ctrlP
-" Bundle 'wincent/Command-T'
+Bundle 'samsonw/vim-task'
 Bundle 'kien/ctrlp.vim'
 " ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
@@ -135,4 +134,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " mappings for the ctrlP
 let g:ctrlp_working_path_mode = 0
 nmap <leader><leader> :CtrlP<cr>
+nmap <leader>t :CtrlP<cr>
 nmap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
+
+" maps for vim-task
+inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
+noremap <silent> <buffer> <C-D-CR> :call Toggle_task_status()<CR>
