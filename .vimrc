@@ -24,9 +24,9 @@ Bundle 'mileszs/ack.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
-" good bye command-t thanks for the ctrlP
-" Bundle 'wincent/Command-T'
+Bundle 'wincent/Command-T'
 Bundle 'kien/ctrlp.vim'
+Bundle '13k/vim-tomorrow'
 " ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
 let g:ruby_doc_command='open'
@@ -112,11 +112,11 @@ nnoremap <leader>v :Rview<space>
 set ttimeoutlen=50
 set backspace=2
 
-" if &term =~ "xterm" || &term =~ "screen"
-"   let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-"   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-"   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-" endif
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+endif
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -136,3 +136,5 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 let g:ctrlp_working_path_mode = 0
 nmap <leader><leader> :CtrlP<cr>
 nmap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
+" nmap <leader>f :CtrlPClearCache<CR>
+nmap <leader>f :CommandTFlush<CR>
