@@ -136,7 +136,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " mappings for the ctrlP
 let g:ctrlp_working_path_mode = 0
 nmap <leader><leader> :CtrlP<cr>
-nmap <leader>t :CtrlP<cr>
 nmap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
 " nmap <leader>f :CtrlPClearCache<CR>
 nmap <leader>f :CommandTFlush<CR>
