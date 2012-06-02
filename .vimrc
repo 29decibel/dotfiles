@@ -27,7 +27,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'wincent/Command-T'
 Bundle 'samsonw/vim-task'
 Bundle 'kien/ctrlp.vim'
-Bundle '13k/vim-tomorrow'
+Bundle 'tomtom/tcomment_vim'
 " ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
 let g:ruby_doc_command='open'
