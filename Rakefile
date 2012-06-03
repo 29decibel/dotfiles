@@ -6,3 +6,4 @@ task :setup do
   `ln -sf #{File.join(dir,'.tmux.conf')} ~/.tmux.conf`
   puts 'setup done.'
 end
+

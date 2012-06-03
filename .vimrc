@@ -37,22 +37,10 @@ let g:ruby_doc_command='open'
 autocmd FileType eco set ft=eco.html
 
 "set the color scheme
-"colorscheme slate
 syntax enable
-"if has('gui_running')
-	"set background=light
-  "set background=dark
-"else
-  "set background=dark
-"endif
-"colorscheme solarized
-colorscheme desert
-"colorscheme Dark
+colorscheme solarized
+set background=dark
 
-"set opacity
-if has('gui_runnning')
-	set transparency=2
-endif
 "set nowrap
 set nowrap
 "when you tap the tap, the bottom will list all available commands
