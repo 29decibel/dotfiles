@@ -108,7 +108,7 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
-set wildignore+=*.png,*.gif,*.jpg
+set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
