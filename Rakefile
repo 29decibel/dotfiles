@@ -7,3 +7,10 @@ task :setup do
   puts 'setup done.'
 end
 
+desc "copy and paste in tmux"
+task :copy_paste_support do
+  `git clone git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git`
+  `cd tmux-MacOSX-pasteboard`
+  `make && cp reattach-to-user-namespace /usr/local/bin`
+end
+
