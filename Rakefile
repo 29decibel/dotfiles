@@ -4,6 +4,7 @@ task :setup do
   `ln -sf #{File.join(dir,'.vimrc')} ~/.vimrc`
   `ln -sf #{File.join(dir,'.gitconfig')} ~/.gitconfig`
   `ln -sf #{File.join(dir,'.tmux.conf')} ~/.tmux.conf`
+  `ln -sf #{File.join(dir,'.tmuxinator')} ~/.tmuxinator`
   puts 'setup done.'
 end
 
