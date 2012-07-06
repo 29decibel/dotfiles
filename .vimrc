@@ -92,12 +92,6 @@ vmap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
 nmap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 "the font
 set guifont=Monaco:h14
-"map the rails project
-"nmap RR :e Gemfile<CR>:Rtree<CR>
-" map for rails
-nnoremap <leader>m :Rmodel<space>
-nnoremap <leader>c :Rcontroller<space>
-nnoremap <leader>v :Rview<space>
 
 " for the tmux or screen
 set ttimeoutlen=50
@@ -137,3 +131,11 @@ noremap <silent> <buffer> <C-D-CR> :call Toggle_task_status()<CR>
 
 " maps for nerdtree
 nnoremap <leader>n :NERDTree .<CR>
+
+" for split window
+nnoremap <leader>s :split<CR>
+nnoremap <leader>v :vsplit<CR>
+
+" refresh config
+nnoremap <leader>r :source $MYVIMRC<CR>
+
