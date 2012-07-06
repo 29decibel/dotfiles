@@ -40,7 +40,7 @@ autocmd FileType eco set ft=eco.html
 
 "set the color scheme
 syntax enable
-colorscheme solarized
+colorscheme desert
 set background=dark
 
 "set nowrap
