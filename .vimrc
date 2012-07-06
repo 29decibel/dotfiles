@@ -76,10 +76,10 @@ set incsearch
 "no fitering
 set novisualbell
 "set the window size
-if has("gui_running")
-	set lines=999
-	set columns=999
-end
+"if has("gui_running")
+"	set lines=999
+"	set columns=999
+"end
 " encoding matters
 set encoding=utf-8
 "set files
@@ -134,3 +134,6 @@ nmap <leader>f :CommandTFlush<CR>
 " maps for vim-task
 inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
 noremap <silent> <buffer> <C-D-CR> :call Toggle_task_status()<CR>
+
+" maps for nerdtree
+nnoremap <leader>n :NERDTree .<CR>
