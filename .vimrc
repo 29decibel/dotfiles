@@ -139,4 +139,4 @@ nnoremap <leader>v :vsplit<CR>
 
 " refresh config
 nnoremap <leader>r :source $MYVIMRC<CR>
-
+nnoremap <leader>e :e $MYVIMRC<CR>
