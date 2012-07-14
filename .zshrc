@@ -29,7 +29,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/Cellar/vim/7.3.502/bin:/Users/lidongbin/app_bins/todo.txt_cli-2.9:$PATH"
 
 eval "$(rbenv init -)"
-export BUNDLER_EDITOR=mvim
+export BUNDLER_EDITOR=vim
 
 # some alias
 alias cdp='cap deploy:production'
