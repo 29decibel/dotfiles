@@ -30,6 +30,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
+Bundle 'Lokaltog/vim-powerline'
 " ruby rails docs
 Bundle 'lucapette/vim-ruby-doc'
 let g:ruby_doc_command='open'
