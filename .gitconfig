@@ -6,7 +6,8 @@
   ci = commit
   st = status
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
+  hist = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  hist2 = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
   type = cat-file -t
   dump = cat-file -p
   pl = pull origin master
