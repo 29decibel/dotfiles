@@ -89,9 +89,9 @@ set nocompatible
 syntax on
 filetype plugin indent on
 "save map
-imap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
-vmap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
-nmap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
+inoremap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
+vnoremap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
+nnoremap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 "the font
 set guifont=Monaco:h14
 
@@ -122,10 +122,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " mappings for the ctrlP
 let g:ctrlp_working_path_mode = 0
-nmap <leader><leader> :CtrlP<cr>
-nmap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
-" nmap <leader>f :CtrlPClearCache<CR>
-nmap <leader>f :CommandTFlush<CR>
+nnoremap <leader><leader> :CtrlP<cr>
+nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
+nnoremap <leader>f :CommandTFlush<CR>
 
 " maps for vim-task
 inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
@@ -140,7 +139,7 @@ nnoremap <leader>v :vsplit<CR>
 
 " refresh config
 nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <leader>e :e $MYVIMRC<CR>
+nnoremap <leader>e :vsplit $MYVIMRC<CR>
 
 " nerdtree ignore config
 let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]']
