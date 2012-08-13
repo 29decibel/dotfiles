@@ -26,14 +26,14 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
 Bundle 'wincent/Command-T'
 Bundle 'samsonw/vim-task'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tomtom/tcomment_vim'
+"Bundle 'kien/ctrlp.vim'
+"Bundle 'tomtom/tcomment_vim'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'msanders/cocoa.vim'
+"Bundle 'msanders/cocoa.vim'
 " ruby rails docs
-Bundle 'lucapette/vim-ruby-doc'
+" Bundle 'lucapette/vim-ruby-doc'
 let g:ruby_doc_command='open'
 
 " for eco snippets
