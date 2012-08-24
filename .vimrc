@@ -31,6 +31,7 @@ Bundle 'samsonw/vim-task'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'derekwyatt/vim-scala'
 "Bundle 'msanders/cocoa.vim'
 " ruby rails docs
 " Bundle 'lucapette/vim-ruby-doc'
