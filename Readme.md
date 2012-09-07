@@ -1,3 +1,8 @@
+## Install vim with ruby support
+```
+brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
+```
+
 ## setup
 ```
 rake setup
