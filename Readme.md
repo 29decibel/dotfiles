@@ -17,7 +17,7 @@ make
 
 ## copy snippets
 ```
-cd ~/.vim/snipmate-snippets/
+cd ~/.vim/bundle/snipmate-snippets/
 rake deploy_local
 ```
 
