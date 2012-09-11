@@ -32,6 +32,7 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'tpope/vim-cucumber'
 "Bundle 'msanders/cocoa.vim'
 " ruby rails docs
 " Bundle 'lucapette/vim-ruby-doc'
@@ -144,3 +145,4 @@ nnoremap <leader>e :vsplit $MYVIMRC<CR>
 
 " nerdtree ignore config
 let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]']
+
