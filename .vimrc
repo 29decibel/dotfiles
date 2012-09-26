@@ -33,6 +33,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
+Bundle 'DAddYE/tomorrow.vim'
 "Bundle 'msanders/cocoa.vim'
 " ruby rails docs
 " Bundle 'lucapette/vim-ruby-doc'
@@ -45,6 +46,9 @@ autocmd FileType eco set ft=eco.html
 "set the color scheme
 syntax enable
 colorscheme slate
+if has("gui_running")
+  colorscheme Tomorrow
+endif
 set background=dark
 
 "set nowrap
