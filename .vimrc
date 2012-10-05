@@ -34,6 +34,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
 Bundle 'DAddYE/tomorrow.vim'
+Bundle 'digitaltoad/vim-jade'
 "Bundle 'msanders/cocoa.vim'
 " ruby rails docs
 " Bundle 'lucapette/vim-ruby-doc'
