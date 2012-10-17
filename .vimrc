@@ -35,6 +35,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
 Bundle 'DAddYE/tomorrow.vim'
 Bundle 'digitaltoad/vim-jade'
+"Bundle 'joestelmach/lint.vim'
 "Bundle 'msanders/cocoa.vim'
 " ruby rails docs
 " Bundle 'lucapette/vim-ruby-doc'
@@ -78,7 +79,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 "set number
-set number
+"set number
 "highlight search and increamental
 set hlsearch
 set incsearch
@@ -101,6 +102,9 @@ vnoremap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
 nnoremap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 "the font
 set guifont=Monaco:h14
+if has("gui_running")
+  set guifont=Monaco:h13
+endif
 
 " for the tmux or screen
 set ttimeoutlen=50
@@ -111,7 +115,7 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
-set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg
+set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -150,4 +154,7 @@ nnoremap <leader>e :vsplit $MYVIMRC<CR>
 
 " nerdtree ignore config
 let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]']
+
+" quick show me the dropbox
+nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>:cd ~/Dropbox/notes<CR>
 
