@@ -35,7 +35,6 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
 Bundle 'DAddYE/tomorrow.vim'
 Bundle 'digitaltoad/vim-jade'
-"Bundle 'joestelmach/lint.vim'
 "Bundle 'msanders/cocoa.vim'
 " ruby rails docs
 " Bundle 'lucapette/vim-ruby-doc'
@@ -158,3 +157,9 @@ let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]'
 " quick show me the dropbox
 nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>:cd ~/Dropbox/notes<CR>
 
+" ack search
+nnoremap <leader>g :AckFromSearch()<CR>
+
+" increase or decrease window size
+nnoremap <leader>, 10<C-w>><CR>
+nnoremap <leader>. 10<C-w><<CR>

@@ -1,5 +1,5 @@
 [user]
-	name = dongbin li
+	name = mike.d
 	email = mike.d.1984@gmail.com
 [alias]
   co = checkout
@@ -12,6 +12,7 @@
   dump = cat-file -p
   pl = pull origin master
   pm = push origin master
+  unstage = reset HEAD
 [color]
   branch = auto
   diff = auto
@@ -29,3 +30,7 @@
   added = yellow
   changed = green
   untracked = cyan
+[core]
+  excludesfile = /Users/miked/.gitignore_global
+[reviewboard]
+  url = http://reviewboard.loyal3.com
