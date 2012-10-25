@@ -164,3 +164,7 @@ nnoremap <leader>g :AckFromSearch()<CR>
 " increase or decrease window size
 nnoremap <leader>, 10<C-w>><CR>
 nnoremap <leader>. 10<C-w><<CR>
+
+" allow using mouse to change window size
+set ttymouse=xterm2
+set mouse=n
