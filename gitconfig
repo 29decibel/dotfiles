@@ -1,6 +1,8 @@
 [user]
 	name = mike.d
 	email = mike.d.1984@gmail.com
+[push]
+  default = upstream
 [alias]
   co = checkout
   ci = commit
