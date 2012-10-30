@@ -26,5 +26,9 @@ make sure you use the right vim **/** the default one is **/usr/bin/vim**
 you can run **ln -sf /usr/local/Cellar/vim/7.3.632/bin/vim /usr/bin/vim** to symbolink the right version
 or you can add the **/usr/local/Cellar/vim/7.3.632/bin** to to PATH
 
+## Generate Ctags
+```
+/usr/local/bin/ctags -R
+```
 
 > loving vim, tmux, mac ...
