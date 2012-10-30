@@ -9,6 +9,7 @@ task :setup do
   `ln -sf #{File.join(dir,'tmux.conf')} ~/.tmux.conf`
   `ln -sf #{File.join(dir,'tmuxinator')} ~/.tmuxinator`
   `ln -sf #{File.join(dir,'sbtconfig')} ~/.sbtconfig`
+  `ln -sf #{File.join(dir,'ctags')} ~/.ctags`
   puts 'setup done.'
 end
 
