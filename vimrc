@@ -43,9 +43,9 @@ autocmd FileType eco set ft=eco.html
 
 "set the color scheme
 syntax enable
-colorscheme slate
+colorscheme solarized
 if has("gui_running")
-  colorscheme Tomorrow
+  " colorscheme Tomorrow
 endif
 set background=dark
 
@@ -113,7 +113,7 @@ set backspace=2
 "   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 " endif
 
-set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub
+set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
