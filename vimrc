@@ -24,7 +24,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-markdown'
-Bundle 'wincent/Command-T'
+" Bundle 'wincent/Command-T'
 Bundle 'samsonw/vim-task'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
@@ -34,6 +34,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'DAddYE/tomorrow.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'spolu/dwm.vim'
+Bundle 'kien/ctrlp.vim'
 let g:ruby_doc_command='open'
 
 " for eco snippets
@@ -105,11 +106,13 @@ endif
 set ttimeoutlen=50
 set backspace=2
 
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-endif
+" only used for command-t
+" if &term =~ "xterm" || &term =~ "screen"
+"   let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+"   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+"   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+" endif
+
 set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub
 
 " Strip trailing whitespace
@@ -129,8 +132,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " mappings for the ctrlP
 let g:ctrlp_working_path_mode = 0
 nnoremap <leader><leader> :CtrlP<cr>
+nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
-nnoremap <leader>f :CommandTFlush<CR>
+" nnoremap <leader>f :CommandTFlush<CR>
 
 " maps for vim-task
 inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
@@ -163,3 +167,6 @@ nnoremap <leader>. 10<C-w><<CR>
 " allow using mouse to change window size
 set ttymouse=xterm2
 set mouse=n
+
+" ctrlp set max showing matches
+let g:ctrlp_max_height = 30
