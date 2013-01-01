@@ -35,6 +35,8 @@ Bundle 'DAddYE/tomorrow.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'spolu/dwm.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'nono/vim-handlebars'
+Bundle 'wavded/vim-stylus'
 let g:ruby_doc_command='open'
 
 " for eco snippets
@@ -113,7 +115,7 @@ set backspace=2
 "   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 " endif
 
-set wildignore+=tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
+set wildignore+=node_modules/**,tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -170,3 +172,7 @@ set mouse=n
 
 " ctrlp set max showing matches
 let g:ctrlp_max_height = 30
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" nerdtree find
+nnoremap <leader>b :NERDTreeFind<CR>
