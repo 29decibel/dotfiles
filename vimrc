@@ -176,3 +176,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " nerdtree find
 nnoremap <leader>b :NERDTreeFind<CR>
+
+" generate ctags
+nnoremap <C-g> :!/usr/local/bin/ctags -R<CR>
