@@ -39,6 +39,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'benmills/vimux'
 let g:ruby_doc_command='open'
 
 " for eco snippets
