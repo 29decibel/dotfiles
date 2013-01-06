@@ -37,6 +37,8 @@ Bundle 'spolu/dwm.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 let g:ruby_doc_command='open'
 
 " for eco snippets
