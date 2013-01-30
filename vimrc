@@ -52,6 +52,8 @@ Bundle 'majutsushi/tagbar'
 " colors
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'DAddYE/tomorrow.vim'
+" exec sql query within vim
+Bundle 'vim-scripts/dbext.vim'
 
 " ###############################################################
 
@@ -198,3 +200,10 @@ nnoremap <C-g> :!/usr/local/bin/ctags -R<CR>
 
 " always show status bar
 set laststatus=2
+
+" for dbext
+let dbext_default_type = 'MYSQL'
+let dbext_default_user = 'root'
+let dbext_default_passwd = 'password'
+let dbext_default_dbname = 'loyal3_test'
+let dbext_default_host = 'localhost'
