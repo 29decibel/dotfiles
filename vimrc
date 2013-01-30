@@ -12,35 +12,48 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
+" ###############################################################
 "
-" original repos on github
+" for git
 Bundle 'tpope/vim-fugitive'
+" for rails
 Bundle 'tpope/vim-rails.git'
-Bundle 'msanders/snipmate.vim'
-Bundle '29decibel/snipmate-snippets'
-Bundle 'kchmck/vim-coffee-script'
+" snipmate
+Bundle "SirVer/ultisnips"
+" nerdtree
 Bundle 'scrooloose/nerdtree'
+" search
 Bundle 'mileszs/ack.vim'
+" tab formation
 Bundle 'godlygeek/tabular'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-markdown'
 " Bundle 'wincent/Command-T'
 Bundle 'samsonw/vim-task'
+" window manager
+Bundle 'spolu/dwm.vim'
+" search replace command-t
+Bundle 'kien/ctrlp.vim'
+" languages
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
-Bundle 'DAddYE/tomorrow.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'spolu/dwm.vim'
-Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
+" for vim-gist
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+" for vmux
 Bundle 'benmills/vimux'
-let g:ruby_doc_command='open'
+" show tagbar
+Bundle 'majutsushi/tagbar'
+" colors
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'DAddYE/tomorrow.vim'
+
+" ###############################################################
 
 " for eco snippets
 " a file can be multiple filetyles, using "." to seperate
@@ -50,7 +63,7 @@ autocmd FileType eco set ft=eco.html
 syntax enable
 colorscheme solarized
 if has("gui_running")
-  " colorscheme Tomorrow
+  colorscheme Tomorrow
 endif
 set background=dark
 
@@ -182,3 +195,6 @@ nnoremap <leader>b :NERDTreeFind<CR>
 
 " generate ctags
 nnoremap <C-g> :!/usr/local/bin/ctags -R<CR>
+
+" always show status bar
+set laststatus=2

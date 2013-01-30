@@ -32,3 +32,4 @@ or you can add the **/usr/local/Cellar/vim/7.3.632/bin** to to PATH
 ```
 
 > loving vim, tmux, mac ...
+
