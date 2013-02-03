@@ -34,7 +34,6 @@ Bundle 'spolu/dwm.vim'
 Bundle 'kien/ctrlp.vim'
 " languages
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'bbommarito/vim-slim'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
@@ -54,6 +53,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'DAddYE/tomorrow.vim'
 " exec sql query within vim
 Bundle 'vim-scripts/dbext.vim'
+" for ctags
+Bundle 'tpope/gem-ctags'
+Bundle 'tpope/vim-bundler'
 
 " ###############################################################
 
@@ -190,13 +192,16 @@ set mouse=n
 
 " ctrlp set max showing matches
 let g:ctrlp_max_height = 30
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
 
 " nerdtree find
 nnoremap <leader>b :NERDTreeFind<CR>
 
 " generate ctags
 nnoremap <C-g> :!/usr/local/bin/ctags -R<CR>
+
+" close window
+nnoremap <C-x> :q<CR>
 
 " always show status bar
 set laststatus=2

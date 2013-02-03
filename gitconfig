@@ -33,8 +33,6 @@
   changed = green
   untracked = cyan
 [core]
-	excludesfile = /Users/mike/.gitignore_global
-[reviewboard]
-  url = http://reviewboard.loyal3.com
+	excludesfile = ~/.gitignore_global
 [github]
 	user = 29decibel
