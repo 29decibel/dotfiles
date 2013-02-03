@@ -56,7 +56,6 @@ Bundle 'vim-scripts/dbext.vim'
 " for ctags
 " gem install gem-ctags
 " manually generate ctags: gem ctags
-Bundle 'tpope/gem-ctags'
 Bundle 'tpope/vim-bundler'
 
 " ###############################################################
@@ -214,3 +213,8 @@ let dbext_default_user = 'root'
 let dbext_default_passwd = 'password'
 let dbext_default_dbname = 'loyal3_test'
 let dbext_default_host = 'localhost'
+
+" This will look in the current directory for 'tags',
+" and work up the tree towards root until one is found. IOW,
+" you can be anywhere in your source tree instead of just the root of it.
+set tags=./tags;/
