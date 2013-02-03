@@ -54,6 +54,8 @@ Bundle 'DAddYE/tomorrow.vim'
 " exec sql query within vim
 Bundle 'vim-scripts/dbext.vim'
 " for ctags
+" gem install gem-ctags
+" manually generate ctags: gem ctags
 Bundle 'tpope/gem-ctags'
 Bundle 'tpope/vim-bundler'
 
