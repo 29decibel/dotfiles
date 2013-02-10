@@ -178,7 +178,7 @@ nnoremap <leader>e :vsplit $MYVIMRC<CR>
 let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]']
 
 " quick show me the dropbox
-nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>:cd ~/Dropbox/notes<CR>
+nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>
 
 " ack search
 nnoremap <leader>g :AckFromSearch()<CR>
