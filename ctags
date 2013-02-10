@@ -34,3 +34,4 @@
 --regex-coffee=/(constructor: \()@[A-Za-z.]+(, @([A-Za-z.]+)){7}/\3/f,field/
 --regex-coffee=/(constructor: \()@[A-Za-z.]+(, @([A-Za-z.]+)){8}/\3/f,field/
 --regex-coffee=/(constructor: \()@[A-Za-z.]+(, @([A-Za-z.]+)){9}/\3/f,field/
+
