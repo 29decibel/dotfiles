@@ -5,6 +5,8 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
+" for powerline
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -57,6 +59,8 @@ Bundle 'vim-scripts/dbext.vim'
 " gem install gem-ctags
 " manually generate ctags: gem ctags
 Bundle 'tpope/vim-bundler'
+" powerline
+Bundle 'Lokaltog/powerline'
 
 " ###############################################################
 
@@ -120,9 +124,9 @@ inoremap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
 vnoremap <C-s> <esc>:w<CR>:echo expand("%f")." saved."<CR>
 nnoremap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 "the font
-set guifont=Monaco:h14
+set guifont=Monaco\ for\ Powerline:h14
 if has("gui_running")
-  set guifont=Monaco:h13
+  set guifont=Monaco\ for\ Powerline:h14
 endif
 
 " for the tmux or screen
