@@ -34,7 +34,7 @@ Bundle 'samsonw/vim-task'
 Bundle 'spolu/dwm.vim'
 " search replace command-t
 Bundle 'kien/ctrlp.vim'
-" languages
+" language specific plugins
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
@@ -61,6 +61,8 @@ Bundle 'vim-scripts/dbext.vim'
 Bundle 'tpope/vim-bundler'
 " powerline
 Bundle 'Lokaltog/powerline'
+" check syntax
+" Bundle 'scrooloose/syntastic'
 
 " ###############################################################
 
@@ -161,6 +163,7 @@ let g:ctrlp_working_path_mode = 0
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
+nnoremap ; :CtrlPBuffer<CR>
 " nnoremap <leader>f :CommandTFlush<CR>
 
 " maps for vim-task
@@ -225,3 +228,6 @@ let dbext_default_host = 'localhost'
 " and work up the tree towards root until one is found. IOW,
 " you can be anywhere in your source tree instead of just the root of it.
 set tags=./tags;/
+
+" for Ultisnips load directories
+let g:UltiSnipsSnippetDirectories=["custom-snippets"]

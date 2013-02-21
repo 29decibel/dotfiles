@@ -1,0 +1,27 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+snippet yuim "Add a YUI model" b
+/**
+ * @module  ${1:module-name}
+ */
+YUI.add('${1:module-name}', function (Y) {
+  "use strict";
+  Y.${2:CustomModelName} =
+    Y.Base.create('${3:model-name}', Y.Model, [], {
+      // Prototype methods for model go here
+      ${4}
+
+	}, {
+		ATTRS: {
+
+		}
+	});
+}, "0.0.1", {
+  requires: ['model', 'node']
+});
+endsnippet
+
+snippet yuiv "Add a YUI view" b
+
+endsnippet
