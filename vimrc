@@ -231,3 +231,7 @@ set tags=./tags;/
 
 " for Ultisnips load directories
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]
+
+" copy to system clipboard
+vmap <C-c> :w !pbcopy<CR><CR>
+
