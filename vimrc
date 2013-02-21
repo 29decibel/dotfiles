@@ -230,4 +230,4 @@ let dbext_default_host = 'localhost'
 set tags=./tags;/
 
 " for Ultisnips load directories
-let g:UltiSnipsSnippetDirectories=["custom-snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]
