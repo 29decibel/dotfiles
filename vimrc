@@ -63,8 +63,11 @@ Bundle 'tpope/vim-bundler'
 Bundle 'Lokaltog/powerline'
 " check syntax
 " Bundle 'scrooloose/syntastic'
+" comment
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'airblade/vim-gitgutter'
 
-" ###############################################################
+" ######################################################################################
 
 " for eco snippets
 " a file can be multiple filetyles, using "." to seperate
@@ -142,7 +145,7 @@ set backspace=2
 "   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 " endif
 
-set wildignore+=node_modules/**,tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
+set wildignore+=build/**,node_modules/**,tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -182,7 +185,7 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>e :vsplit $MYVIMRC<CR>
 
 " nerdtree ignore config
-let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]']
+let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]','__km.*']
 
 " quick show me the dropbox
 nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>
@@ -217,7 +220,7 @@ nnoremap <C-x> :q<CR>
 " always show status bar
 set laststatus=2
 
-" for dbext
+" dbext
 let dbext_default_type = 'MYSQL'
 let dbext_default_user = 'root'
 let dbext_default_passwd = 'password'
@@ -229,8 +232,12 @@ let dbext_default_host = 'localhost'
 " you can be anywhere in your source tree instead of just the root of it.
 set tags=./tags;/
 
-" for Ultisnips load directories
+" Ultisnips
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]
+let g:UltiSnipsEditSplit = 'vertical'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " copy to system clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
