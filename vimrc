@@ -26,10 +26,11 @@ Bundle "SirVer/ultisnips"
 Bundle 'scrooloose/nerdtree'
 " search
 Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 " tab formation
 Bundle 'godlygeek/tabular'
 " Bundle 'wincent/Command-T'
-Bundle 'samsonw/vim-task'
+Bundle 'davidoc/taskpaper.vim'
 " window manager
 Bundle 'spolu/dwm.vim'
 " search replace command-t
@@ -65,7 +66,6 @@ Bundle 'Lokaltog/powerline'
 " Bundle 'scrooloose/syntastic'
 " comment
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'airblade/vim-gitgutter'
 
 " ######################################################################################
 
