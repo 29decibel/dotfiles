@@ -11,7 +11,8 @@ rake setup
 ## compile Command-t
 ```
 cd ~/.vim/bundle/Command-T/ruby/command-t
-/usr/bin/ruby extract.rb
+rbenv local system
+ruby extract.rb
 make
 ```
 

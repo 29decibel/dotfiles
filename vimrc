@@ -34,7 +34,7 @@ Bundle 'davidoc/taskpaper.vim'
 " window manager
 Bundle 'spolu/dwm.vim'
 " search replace command-t
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 " language specific plugins
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
@@ -66,6 +66,8 @@ Bundle 'Lokaltog/powerline'
 " Bundle 'scrooloose/syntastic'
 " comment
 Bundle 'scrooloose/nerdcommenter'
+" command t
+Bundle 'wincent/Command-T'
 
 " ######################################################################################
 
@@ -162,11 +164,11 @@ endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " mappings for the ctrlP
-let g:ctrlp_working_path_mode = 0
-nnoremap <leader><leader> :CtrlP<cr>
-nnoremap <leader>t :CtrlP<cr>
-nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
-nnoremap ; :CtrlPBuffer<CR>
+" let g:ctrlp_working_path_mode = 0
+" nnoremap <leader><leader> :CtrlP<cr>
+" nnoremap <leader>t :CtrlP<cr>
+" nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
+" nnoremap ; :CtrlPBuffer<CR>
 " nnoremap <leader>f :CommandTFlush<CR>
 
 " maps for vim-task
@@ -202,8 +204,8 @@ set ttymouse=xterm2
 set mouse=n
 
 " ctrlp set max showing matches
-let g:ctrlp_max_height = 30
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
+" let g:ctrlp_max_height = 30
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
 
 " nerdtree find
 nnoremap <leader>b :NERDTreeFind<CR>
@@ -242,3 +244,11 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " copy to system clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 
+set ttimeoutlen=50
+
+" for command-t working in tmux
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+endif
