@@ -25,36 +25,37 @@ Bundle "SirVer/ultisnips"
 " nerdtree
 Bundle 'scrooloose/nerdtree'
 " search
-Bundle 'mileszs/ack.vim'
+" Bundle 'mileszs/ack.vim' ag is much faster than this
 Bundle 'rking/ag.vim'
 " tab formation
 Bundle 'godlygeek/tabular'
-" Bundle 'wincent/Command-T'
+" really nice taskpaper implementation
 Bundle 'davidoc/taskpaper.vim'
 " window manager
-Bundle 'spolu/dwm.vim'
+" Bundle 'spolu/dwm.vim' really nice window manager, but not use for now
 " search replace command-t
-" Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim' sorry not fast enough than command-T
 " language specific plugins
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'derekwyatt/vim-scala'
+" Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 " for vim-gist
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+" Bundle 'mattn/webapi-vim'
+" Bundle 'mattn/gist-vim'
 " for vmux
 Bundle 'benmills/vimux'
 " show tagbar
 Bundle 'majutsushi/tagbar'
 " colors
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'DAddYE/tomorrow.vim'
+" Bundle 'DAddYE/tomorrow.vim'
 " exec sql query within vim
+" very nice database connection plugin
 Bundle 'vim-scripts/dbext.vim'
 " for ctags
 " gem install gem-ctags
@@ -193,7 +194,7 @@ let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]'
 nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>
 
 " ack search
-nnoremap <leader>g :AckFromSearch()<CR>
+" nnoremap <leader>g :AckFromSearch()<CR>
 
 " increase or decrease window size
 nnoremap <leader>, 10<C-w>><CR>
@@ -223,11 +224,11 @@ nnoremap <C-x> :q<CR>
 set laststatus=2
 
 " dbext
-let dbext_default_type = 'MYSQL'
-let dbext_default_user = 'root'
-let dbext_default_passwd = 'password'
-let dbext_default_dbname = 'loyal3_test'
-let dbext_default_host = 'localhost'
+" let dbext_default_type = 'MYSQL'
+" let dbext_default_user = 'root'
+" let dbext_default_passwd = 'password'
+" let dbext_default_dbname = 'loyal3_test'
+" let dbext_default_host = 'localhost'
 
 " This will look in the current directory for 'tags',
 " and work up the tree towards root until one is found. IOW,
