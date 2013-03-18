@@ -39,7 +39,7 @@ Bundle 'davidoc/taskpaper.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
-" Bundle 'derekwyatt/vim-scala'
+Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
@@ -69,6 +69,8 @@ Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdcommenter'
 " command t
 Bundle 'wincent/Command-T'
+" for autocompletion
+Bundle 'Valloric/YouCompleteMe'
 
 " ######################################################################################
 

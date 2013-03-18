@@ -32,5 +32,11 @@ or you can add the **/usr/local/Cellar/vim/7.3.632/bin** to to PATH
 /usr/local/bin/ctags -R
 ```
 
+## Install YouCompleteMe
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+```
+
 > loving vim, tmux, mac ...
 
