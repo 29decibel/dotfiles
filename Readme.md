@@ -43,8 +43,9 @@ cd ~/.vim/bundle/YouCompleteMe
 ```bash
 $ git clone git://github.com/erikw/tmux-powerline.git ~/.tmux-powerline
 
-# copy the default config
-cp default.sh ~/.tmux-powerline/config/
+# copy the theme to tmux-powerline
+$ cp ./tmux-powerline/29decibel.sh ~/.tmux-powerline/themes/
+$ ln -sf ./tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
 ```
 
 > loving vim, tmux, mac ...
