@@ -69,8 +69,9 @@ Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdcommenter'
 " command t
 Bundle 'wincent/Command-T'
-" for autocompletion
-Bundle 'Valloric/YouCompleteMe'
+" for autocompletion, this is good, but too good sometimes
+" Bundle 'Valloric/YouCompleteMe'
+Bundle '29decibel/codeschool-vim-theme'
 
 " ######################################################################################
 
@@ -82,7 +83,7 @@ autocmd FileType eco set ft=eco.html
 syntax enable
 colorscheme solarized
 if has("gui_running")
-  colorscheme Tomorrow
+  " colorscheme Tomorrow
 endif
 set background=dark
 
@@ -236,6 +237,7 @@ set laststatus=2
 " and work up the tree towards root until one is found. IOW,
 " you can be anywhere in your source tree instead of just the root of it.
 set tags=./tags;/
+set spell
 
 " Ultisnips
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]

@@ -1,6 +1,7 @@
 ## Install vim with ruby support
 ```
 brew install https://raw.github.com/Homebrew/homebrew-dupes/master/vim.rb
+brew install vim --with-ruby --with-python --with-perl
 ```
 
 ## setup
@@ -36,6 +37,14 @@ or you can add the **/usr/local/Cellar/vim/7.3.632/bin** to to PATH
 ```
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
+```
+
+## Tmux Powerline
+```bash
+$ git clone git://github.com/erikw/tmux-powerline.git ~/.tmux-powerline
+
+# copy the default config
+cp default.sh ~/.tmux-powerline/config/
 ```
 
 > loving vim, tmux, mac ...
