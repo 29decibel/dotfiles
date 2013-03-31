@@ -72,6 +72,11 @@ Bundle 'wincent/Command-T'
 " for autocompletion, this is good, but too good sometimes
 " Bundle 'Valloric/YouCompleteMe'
 Bundle '29decibel/codeschool-vim-theme'
+" DASH
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+" expand selection
+Bundle 'terryma/vim-expand-region'
 
 " ######################################################################################
 
@@ -257,3 +262,11 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+
+" for vimux
+nnoremap <leader>xr :VimuxPromptCommand<CR>
+nnoremap <leader>xl :VimuxRunLastCommand<CR>
+
+" taskpaper
+nnoremap <leader>p :NERDTree ~/Dropbox/tasks<CR>
+
