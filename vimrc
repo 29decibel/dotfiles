@@ -77,6 +77,8 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 " expand selection
 Bundle 'terryma/vim-expand-region'
+" dispatch
+Bundle 'tpope/vim-dispatch'
 
 " ######################################################################################
 
@@ -199,7 +201,7 @@ nnoremap <leader>e :vsplit $MYVIMRC<CR>
 let NERDTreeIgnore=['.xcodeproj$[[dir]]','.xcdatamodeld$[[dir]]','.zip$[[file]]','.lproj$[[dir]]','.xcdatamodel$[[dir]]','__km.*']
 
 " quick show me the dropbox
-nnoremap <leader>d :NERDTree ~/Dropbox/notes<CR>
+nnoremap <leader>d :NERDTree ~/Dropbox/wiki<CR>
 
 " ack search
 " nnoremap <leader>g :AckFromSearch()<CR>
@@ -270,3 +272,24 @@ nnoremap <leader>xl :VimuxRunLastCommand<CR>
 " taskpaper
 nnoremap <leader>p :NERDTree ~/Dropbox/tasks<CR>
 
+" example function to generate javascript comments
+function! GenerateDOCComment()
+  let l    = line('.')
+  let i    = indent(l)
+  let pre  = repeat(' ',i)
+  let text = getline(l)
+  let params   = matchstr(text,'([^)]*)')
+  let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
+  echomsg params
+  let vars = []
+  let m    = ' '
+  let ml = matchlist(params,paramPat)
+  while ml!=[]
+    let [_,var;rest]= ml
+    let vars += [pre.' * @param '.var]
+    let ml = matchlist(rest,paramPat,0)
+  endwhile
+  let comment = [pre.'/**',pre.' * '] + vars + [pre.' */']
+  call append(l-1,comment)
+  call cursor(l+1,i+3)
+endfunction
