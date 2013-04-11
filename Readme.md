@@ -50,3 +50,5 @@ $ ln -sf ./tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
 
 > loving vim, tmux, mac ...
 
+## TODO
+* write a shell script to automate this installation process
