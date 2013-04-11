@@ -44,6 +44,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
+Bundle 'slim-template/vim-slim'
 " for vim-gist
 " Bundle 'mattn/webapi-vim'
 " Bundle 'mattn/gist-vim'
@@ -246,6 +247,9 @@ set laststatus=2
 set tags=./tags;/
 set spell
 
+" I really need smartcase
+set smartcase
+
 " Ultisnips
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom-snippets"]
 let g:UltiSnipsEditSplit = 'vertical'
@@ -292,4 +296,12 @@ function! GenerateDOCComment()
   let comment = [pre.'/**',pre.' * '] + vars + [pre.' */']
   call append(l-1,comment)
   call cursor(l+1,i+3)
+endfunction
+
+" escape html
+" :call HtmlEscape()
+function HtmlEscape()
+  silent s/&/\&amp;/eg
+  silent s/</\&lt;/eg
+  silent s/>/\&gt;/eg
 endfunction
