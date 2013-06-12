@@ -17,6 +17,10 @@ ruby extract.rb
 make
 ```
 
+## Config your iterm
+xterm-256color
+font to powerline font
+
 ## copy snippets
 ```
 cd ~/.vim/bundle/snipmate-snippets/
@@ -52,3 +56,5 @@ $ ln -sf ./tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
 
 ## TODO
 * write a shell script to automate this installation process
+
+

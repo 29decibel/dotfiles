@@ -80,6 +80,8 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'terryma/vim-expand-region'
 " dispatch
 Bundle 'tpope/vim-dispatch'
+" javascript syntax
+Bundle 'jelera/vim-javascript-syntax'
 
 " ######################################################################################
 
@@ -300,7 +302,7 @@ endfunction
 
 " escape html
 " :call HtmlEscape()
-function HtmlEscape()
+function! HtmlEscape()
   silent s/&/\&amp;/eg
   silent s/</\&lt;/eg
   silent s/>/\&gt;/eg
