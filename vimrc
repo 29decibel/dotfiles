@@ -82,6 +82,14 @@ Bundle 'terryma/vim-expand-region'
 Bundle 'tpope/vim-dispatch'
 " javascript syntax
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'othree/javascript-libraries-syntax.vim'
+" css colors
+Bundle 'skammer/vim-css-color'
+" js beautify
+Bundle 'maksimr/vim-jsbeautify'
+
+" Bundle "Shougo/vimproc.vim"
+" Bundle "Shougo/unite.vim"
 
 " ######################################################################################
 
@@ -91,11 +99,14 @@ autocmd FileType eco set ft=eco.html
 
 "set the color scheme
 syntax enable
+
 colorscheme solarized
-if has("gui_running")
-  " colorscheme Tomorrow
-endif
+let g:solarized_termtrans = 1
+
 set background=dark
+if has("gui_running")
+  set background=light
+endif
 
 "set nowrap
 set nowrap
@@ -161,7 +172,9 @@ set backspace=2
 "   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 " endif
 
-set wildignore+=build/**,node_modules/**,tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
+" nnoremap <leader>t :Unite file_rec/async<cr>
+
+set wildignore+=target/**,build/**,node_modules/**,tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -307,3 +320,4 @@ function! HtmlEscape()
   silent s/</\&lt;/eg
   silent s/>/\&gt;/eg
 endfunction
+
