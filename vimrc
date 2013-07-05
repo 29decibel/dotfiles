@@ -88,6 +88,7 @@ Bundle 'skammer/vim-css-color'
 " js beautify
 Bundle 'maksimr/vim-jsbeautify'
 
+
 " Bundle "Shougo/vimproc.vim"
 " Bundle "Shougo/unite.vim"
 
