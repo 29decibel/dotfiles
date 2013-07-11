@@ -7,6 +7,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 " for powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -62,7 +63,7 @@ Bundle 'vim-scripts/dbext.vim'
 " gem install gem-ctags
 " manually generate ctags: gem ctags
 Bundle 'tpope/vim-bundler'
-" powerline
+" Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/powerline'
 " check syntax
 " Bundle 'scrooloose/syntastic'
@@ -87,10 +88,8 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'skammer/vim-css-color'
 " js beautify
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'jnurmine/Zenburn'
 
-
-" Bundle "Shougo/vimproc.vim"
-" Bundle "Shougo/unite.vim"
 
 " ######################################################################################
 
@@ -101,13 +100,9 @@ autocmd FileType eco set ft=eco.html
 "set the color scheme
 syntax enable
 
-colorscheme solarized
+set t_Co=256
+colorscheme Zenburn
 let g:solarized_termtrans = 1
-
-set background=dark
-if has("gui_running")
-  set background=light
-endif
 
 "set nowrap
 set nowrap
@@ -261,7 +256,7 @@ set laststatus=2
 " and work up the tree towards root until one is found. IOW,
 " you can be anywhere in your source tree instead of just the root of it.
 set tags=./tags;/
-set spell
+" set spell
 
 " I really need smartcase
 set smartcase
