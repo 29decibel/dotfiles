@@ -87,8 +87,10 @@ Bundle 'othree/javascript-libraries-syntax.vim'
 " css colors
 Bundle 'skammer/vim-css-color'
 " js beautify
-Bundle 'maksimr/vim-jsbeautify'
+" Bundle 'maksimr/vim-jsbeautify'
 Bundle 'jnurmine/Zenburn'
+" better line numbers
+" Bundle 'myusuf3/numbers.vim'
 
 
 " ######################################################################################
