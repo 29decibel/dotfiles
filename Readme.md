@@ -52,6 +52,12 @@ $ cp ./tmux-powerline/29decibel.sh ~/.tmux-powerline/themes/
 $ ln -sf ./tmux-powerline/tmux-powerlinerc ~/.tmux-powerlinerc
 ```
 
+## scala
+You need to check out appropriate ensime branch by hand by running ie.
+
+> git checkout scala-2.10
+in ensime plugin directory managed by vundle (probably ~/.vim/bundle/ensime). Also you'll need to run make in vimproc directory.
+
 > loving vim, tmux, mac ...
 
 ## TODO

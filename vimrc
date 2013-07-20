@@ -92,6 +92,14 @@ Bundle 'jnurmine/Zenburn'
 " better line numbers
 " Bundle 'myusuf3/numbers.vim'
 
+" for scala config
+Bundle "megaannum/self"
+Bundle "megaannum/forms"
+Bundle "Shougo/vimproc"
+Bundle "Shougo/vimshell"
+Bundle "aemoncannon/ensime"
+Bundle "megaannum/vimside"
+
 
 " ######################################################################################
 
