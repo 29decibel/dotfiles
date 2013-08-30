@@ -70,7 +70,9 @@ Bundle 'Lokaltog/powerline'
 " comment
 Bundle 'scrooloose/nerdcommenter'
 " command t
-Bundle 'wincent/Command-T'
+" Bundle 'wincent/Command-T'
+" Command t alternative
+Bundle 'kien/ctrlp.vim'
 " for autocompletion, this is good, but too good sometimes
 " Bundle 'Valloric/YouCompleteMe'
 Bundle '29decibel/codeschool-vim-theme'
@@ -91,6 +93,9 @@ Bundle 'skammer/vim-css-color'
 Bundle 'jnurmine/Zenburn'
 " better line numbers
 " Bundle 'myusuf3/numbers.vim'
+Bundle 'mikewest/vimroom'
+" go lang
+Bundle 'jnwhiteh/vim-golang'
 
 
 " ######################################################################################
@@ -172,7 +177,7 @@ set backspace=2
 
 " nnoremap <leader>t :Unite file_rec/async<cr>
 
-set wildignore+=target/**,build/**,node_modules/**,tmp/cache/**,*.o,*.obj,.git,*.png,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
+set wildignore+=*/target/*,*/build/*,*/node_modules/*,tmp/cache/**,*.o,*.obj,.git,*.ttf,*.png,*.ico,*.wof,*.eot,*.svg,*.gif,*.jpg,*.pdf,*.mobi,*.epub,*.class
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -189,9 +194,10 @@ endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " mappings for the ctrlP
-" let g:ctrlp_working_path_mode = 0
-" nnoremap <leader><leader> :CtrlP<cr>
-" nnoremap <leader>t :CtrlP<cr>
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:40,results:40'
+nnoremap <leader><leader> :CtrlP<cr>
+nnoremap <leader>t :CtrlP<cr>
 " nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
 " nnoremap ; :CtrlPBuffer<CR>
 " nnoremap <leader>f :CommandTFlush<CR>
