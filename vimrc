@@ -66,7 +66,7 @@ Bundle 'tpope/vim-bundler'
 " Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/powerline'
 " check syntax
-" Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 " comment
 Bundle 'scrooloose/nerdcommenter'
 " command t
@@ -96,6 +96,9 @@ Bundle 'jnurmine/Zenburn'
 Bundle 'mikewest/vimroom'
 " go lang
 Bundle 'jnwhiteh/vim-golang'
+" abolish.vim: easily search for, substitute, and abbreviate multiple variants
+" of a word
+Bundle 'tpope/vim-abolish'
 
 
 " ######################################################################################
@@ -103,6 +106,11 @@ Bundle 'jnwhiteh/vim-golang'
 " for eco snippets
 " a file can be multiple filetyles, using "." to seperate
 autocmd FileType eco set ft=eco.html
+
+" for go lang
+autocmd FileType go compiler golang
+
+let g:golang_goroot = "/usr/local/Cellar/go/1.1.2"
 
 "set the color scheme
 syntax enable
@@ -324,4 +332,11 @@ function! HtmlEscape()
   silent s/</\&lt;/eg
   silent s/>/\&gt;/eg
 endfunction
+
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
+
+nnoremap <leader>h :lne<CR>
+let g:syntastic_javascript_checkers=['jshint']
 
