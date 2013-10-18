@@ -5,8 +5,6 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-" for powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 call vundle#rc()
 
@@ -63,8 +61,7 @@ Bundle 'vim-scripts/dbext.vim'
 " gem install gem-ctags
 " manually generate ctags: gem ctags
 Bundle 'tpope/vim-bundler'
-" Bundle 'bling/vim-airline'
-Bundle 'Lokaltog/powerline'
+Bundle 'bling/vim-airline'
 " check syntax
 Bundle 'scrooloose/syntastic'
 " comment
@@ -110,7 +107,7 @@ autocmd FileType eco set ft=eco.html
 " for go lang
 autocmd FileType go compiler golang
 
-let g:golang_goroot = "/usr/local/Cellar/go/1.1.2"
+let g:golang_goroot = "/usr/local/Cellar/go/1.1.2/libexec"
 
 "set the color scheme
 syntax enable

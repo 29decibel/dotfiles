@@ -10,6 +10,7 @@
   br = branch
   l = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   lm = log --pretty=oneline --all --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  lp = log --pretty=oneline --all --no-merges --pretty=format:'%h%  %ad %s <%an>' --date=iso
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
   type = cat-file -t
   dump = cat-file -p
