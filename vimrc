@@ -4,117 +4,189 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
+" My Plugins here:
 " ###############################################################
 "
+" hope this is the most awesome one
+Plugin 'tpope/timl'
+
 " for git
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
+
 " for rails
-Bundle 'tpope/vim-rails.git'
+Plugin 'tpope/vim-rails.git'
+
 " snipmate
-Bundle "SirVer/ultisnips"
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " nerdtree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
+
 " search
-" Bundle 'mileszs/ack.vim' ag is much faster than this
-Bundle 'rking/ag.vim'
+" Plugin 'mileszs/ack.vim' ag is much faster than this
+Plugin 'rking/ag.vim'
+
 " tab formation
-Bundle 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
+
 " really nice taskpaper implementation
-Bundle 'davidoc/taskpaper.vim'
+Plugin 'davidoc/taskpaper.vim'
+
 " window manager
-" Bundle 'spolu/dwm.vim' really nice window manager, but not use for now
-" search replace command-t
-" Bundle 'kien/ctrlp.vim' sorry not fast enough than command-T
+" Plugin 'spolu/dwm.vim' really nice window manager, but not use for now
 " language specific plugins
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'groenewege/vim-less'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-markdown'
-Bundle 'nono/vim-handlebars'
-Bundle 'wavded/vim-stylus'
-Bundle 'slim-template/vim-slim'
-" for vim-gist
-" Bundle 'mattn/webapi-vim'
-" Bundle 'mattn/gist-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-markdown'
+Plugin 'nono/vim-handlebars'
+Plugin 'juvenn/mustache.vim'
+
+" color scheme zenburn
+Plugin 'jnurmine/Zenburn'
+
 " for vmux
-Bundle 'benmills/vimux'
+Plugin 'benmills/vimux'
+
 " show tagbar
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
+
 " colors
-Bundle 'altercation/vim-colors-solarized'
-" Bundle 'DAddYE/tomorrow.vim'
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'DAddYE/tomorrow.vim'
 " exec sql query within vim
 " very nice database connection plugin
-Bundle 'vim-scripts/dbext.vim'
+"Plugin 'vim-scripts/dbext.vim'
 " for ctags
 " gem install gem-ctags
 " manually generate ctags: gem ctags
-Bundle 'tpope/vim-bundler'
-Bundle 'bling/vim-airline'
+Plugin 'tpope/vim-bundler'
+
 " check syntax
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
+
 " comment
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
+
 " command t
-" Bundle 'wincent/Command-T'
-" Command t alternative
-Bundle 'kien/ctrlp.vim'
-" for autocompletion, this is good, but too good sometimes
-" Bundle 'Valloric/YouCompleteMe'
-Bundle '29decibel/codeschool-vim-theme'
-" DASH
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
+" Plugin 'wincent/Command-T'
+
+" ctrlp
+Plugin 'kien/ctrlp.vim'
+
 " expand selection
-Bundle 'terryma/vim-expand-region'
+Plugin 'terryma/vim-expand-region'
+
 " dispatch
-Bundle 'tpope/vim-dispatch'
+" send commands to other panel of the terminal
+Plugin 'tpope/vim-dispatch'
+
 " javascript syntax
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'othree/javascript-libraries-syntax.vim'
-" css colors
-Bundle 'skammer/vim-css-color'
-" js beautify
-" Bundle 'maksimr/vim-jsbeautify'
-Bundle 'jnurmine/Zenburn'
-" better line numbers
-" Bundle 'myusuf3/numbers.vim'
-Bundle 'mikewest/vimroom'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/javascript-libraries-syntax.vim'
+
 " go lang
-Bundle 'jnwhiteh/vim-golang'
+Plugin 'jnwhiteh/vim-golang'
+
 " abolish.vim: easily search for, substitute, and abbreviate multiple variants
 " of a word
-Bundle 'tpope/vim-abolish'
+Plugin 'tpope/vim-abolish'
+"Plugin 'amix/vim-zenroom'
 
+" turn your raw tempalte into string
+Plugin '29decibel/vim-stringify'
+
+" for clojure
+Plugin 'tpope/vim-classpath'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
+
+Plugin 'toyamarinyon/vim-swift'
+
+Plugin 'ConradIrwin/vim-bracketed-paste'
+
+Plugin 'reedes/vim-colors-pencil'
+"Plugin 'vim-scripts/paredit.vim'
+
+" for golang
+Plugin 'fatih/vim-go'
+
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+Plugin 'lambdatoast/elm.vim'
+
+
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " ######################################################################################
+syntax enable
 
 " for eco snippets
 " a file can be multiple filetyles, using "." to seperate
 autocmd FileType eco set ft=eco.html
 
-" for go lang
+" for golang
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+"filetype off
+"filetype plugin indent off
+"set runtimepath+=$GOROOT/misc/vim
+"filetype plugin indent on
+"syntax on
+let g:golang_goroot = "/usr/local/Cellar/go/1.2/libexec"
 autocmd FileType go compiler golang
-
-let g:golang_goroot = "/usr/local/Cellar/go/1.1.2/libexec"
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
 
 "set the color scheme
-syntax enable
 
 set t_Co=256
-colorscheme Zenburn
+colorscheme solarized
+"colorscheme pencil
 let g:solarized_termtrans = 1
+
+set background=dark
+
+" for airline
+"let g:airline_theme="tomorrow"
 
 "set nowrap
 set nowrap
@@ -166,7 +238,7 @@ nnoremap <C-s> :w<CR>:echo expand("%f")." saved."<CR>
 "the font
 set guifont=Monaco\ for\ Powerline:h14
 if has("gui_running")
-  set guifont=Monaco\ for\ Powerline:h14
+  set guifont=Monaco\ for\ Powerline:h12
 endif
 
 " for the tmux or screen
@@ -198,14 +270,8 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" mappings for the ctrlP
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:40,results:40'
-nnoremap <leader><leader> :CtrlP<cr>
-nnoremap <leader>t :CtrlP<cr>
-" nnoremap <leader>bb :CtrlP app/assets/javascripts/backbone<CR>
-" nnoremap ; :CtrlPBuffer<CR>
-" nnoremap <leader>f :CommandTFlush<CR>
+" auto compile elm file
+au BufWritePost *.elm ElmMakeCurrentFile
 
 " maps for vim-task
 inoremap <silent> <buffer> <C-D-CR> <ESC>:call Toggle_task_status()<CR>i
@@ -239,12 +305,12 @@ nnoremap <leader>. 10<C-w><<CR>
 set ttymouse=xterm2
 set mouse=n
 
-" ctrlp set max showing matches
-" let g:ctrlp_max_height = 30
-" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
-
 " nerdtree find
 nnoremap <leader>b :NERDTreeFind<CR>
+
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:40,results:40'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|node'
+nnoremap <leader>t :CtrlP<cr>
 
 " invoke tarbar toggle
 nnoremap TT :TagbarToggle<CR>
@@ -257,13 +323,6 @@ nnoremap <C-x> :q<CR>
 
 " always show status bar
 set laststatus=2
-
-" dbext
-" let dbext_default_type = 'MYSQL'
-" let dbext_default_user = 'root'
-" let dbext_default_passwd = 'password'
-" let dbext_default_dbname = 'loyal3_test'
-" let dbext_default_host = 'localhost'
 
 " This will look in the current directory for 'tags',
 " and work up the tree towards root until one is found. IOW,
@@ -330,10 +389,22 @@ function! HtmlEscape()
   silent s/>/\&gt;/eg
 endfunction
 
+map <leader>g :call Stringify()<CR>
+
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
+
+" get rid of split char
+set fillchars-=vert:\|
 
 
 nnoremap <leader>h :lne<CR>
 let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_go_checkers=['golint']
 
+let g:syntastic_mode_map={ 'mode': 'active',
+                     \ 'active_filetypes': [],
+                     \ 'passive_filetypes': ['html'] }
+
+
+set shortmess=a

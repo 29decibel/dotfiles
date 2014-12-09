@@ -1,6 +1,6 @@
 [user]
-	name = 29decibel
-  email = mike.d.1984@gmail.com
+  name = 29decibel
+  email = mikeli@fastmail.fm
 [push]
   default = upstream
 [alias]
@@ -18,6 +18,7 @@
   pm = push origin master
   unstage = reset HEAD
 	today = log --since=1am
+  ;gd2 = log ${$3}..${$2}  --no-merges --oneline --pretty=format:"%s" | uniq
 [color]
   branch = auto
   diff = auto
@@ -36,6 +37,14 @@
   changed = green
   untracked = cyan
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/mikeli/.gitignore_global
 [github]
 	user = 29decibel
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	ff = true

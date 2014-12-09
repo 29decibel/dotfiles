@@ -16,6 +16,50 @@ ACX.add('$1', function (A) {
 });
 endsnippet
 
-snippet yuiv "Add a YUI view" b
 
+snippet yuit "Add a YUI test" b
+ACX.add('test-${1:module-name}', function (A) {
+
+  var test$1 = new A.Test.Case({
+    name: 'Test $1',
+
+    //----------------------------------------------------
+    // Setup and tear down
+    //----------------------------------------------------
+    setUp: function() {
+    },
+
+    tearDown: function() {
+    },
+
+    //----------------------------------------------------
+    // Tests
+    //----------------------------------------------------
+
+    "${2:test-name}": function() {
+      A.Assert.areEqual(true, false, "fix me .");
+    }
+
+  });
+
+
+  /**
+   * Add Test
+   **/
+  A.Test.Runner.add(test$1);
+}, '', {
+  requires: ['test', '$1']
+});
+endsnippet
+
+snippet yuiv "Add a YUI view" b
+var ${1:view-name} = A.Base.create("$1", A.View, [], {
+	initializer: function () {
+
+	},
+
+	destructor: function() {
+
+	}
+});
 endsnippet
