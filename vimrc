@@ -94,6 +94,15 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 
 " go lang
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
+
+Plugin 'vim-scripts/DrawIt'
+
+Plugin 'gregsexton/MatchTag'
+Plugin 'marijnh/tern_for_vim'
+
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 
 " abolish.vim: easily search for, substitute, and abbreviate multiple variants
 " of a word
@@ -116,14 +125,11 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'reedes/vim-colors-pencil'
 "Plugin 'vim-scripts/paredit.vim'
 
-" for golang
-Plugin 'fatih/vim-go'
-
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'lambdatoast/elm.vim'
 
-
+Plugin 'maksimr/vim-jsbeautify'
 
 
 " All of your Plugins must be added before the following line
@@ -145,9 +151,9 @@ autocmd FileType eco set ft=eco.html
 "set runtimepath+=$GOROOT/misc/vim
 "filetype plugin indent on
 "syntax on
-let g:golang_goroot = "/usr/local/Cellar/go/1.2/libexec"
+let g:golang_goroot = "/usr/local/Cellar/go/1.4.2/libexec"
 autocmd FileType go compiler golang
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+"autocmd FileType go autocmd BufWritePre <buffer> Fmt
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
@@ -393,6 +399,10 @@ map <leader>g :call Stringify()<CR>
 
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
+
+" for vim-notes dir
+let g:notes_directories = ['~/Dropbox/vim-notes']
+
 
 " get rid of split char
 set fillchars-=vert:\|
