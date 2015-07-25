@@ -11,5 +11,14 @@ ln -sf ${PWD}/tmux.conf ~/.tmux.conf
 ln -sf ${PWD}/ctags ~/.ctags
 ln -sf ${PWD}/custom-snippets ~/.vim/custom-snippets
 
-echo Copy paste in tmux support
-brew install reattach-to-user-namespace
+
+brewInstallCopyPaste() {
+  if hash brew 2>/dev/null; then
+    echo Copy paste in tmux support
+    brew install reattach-to-user-namespace
+  else
+    echo No need to instal, no brew found.
+  fi
+}
+
+brewInstallCopyPaste
