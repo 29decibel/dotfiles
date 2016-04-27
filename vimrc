@@ -21,6 +21,7 @@ Plugin 'tpope/timl'
 Plugin 'tpope/vim-fugitive'
 
 " for rails
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails.git'
 
 " snipmate
