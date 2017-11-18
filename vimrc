@@ -23,6 +23,9 @@ Plug 'honza/vim-snippets'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" git
+Plug 'tpope/vim-fugitive'
+
 " ES6
 Plug 'isRuslan/vim-es6'
 
