@@ -34,6 +34,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " Theme
 Plug 'lifepillar/vim-solarized8'
+Plug 'ajh17/Spacegray.vim' " https://github.com/ajh17/Spacegray.vim
 
 " SASS
 Plug 'cakebaker/scss-syntax.vim'
@@ -106,7 +107,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Theme
 set background=dark
-colorscheme solarized8
+colorscheme spacegray
 
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
