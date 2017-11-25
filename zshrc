@@ -1,41 +1,31 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-export ZSH_THEME="robbyrussell"
+source ~/.zprezto/init.zsh
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+export PATH="$HOME/Library/Haskell/bin:$PATH"
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
+export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+export GOPATH="$HOME/go-projects"
+export PATH=$PATH:$GOPATH/bin
 
-source $ZSH/oh-my-zsh.sh
+export ANDROID_HOME=~/Library/Android/sdk
 
-# Customize to your needs...
-export PATH="$HOME/.rbenv/bin:$PATH"
 
-eval "$(rbenv init -)"
-export BUNDLER_EDITOR=vim
+# load all dev used keys (like AWS etc.)
+[ -f ~/.dev_keys.zsh ] && source ~/.dev_keys.zsh
 
-# for tmux
+export PATH=$PATH:$HOME/.local/bin
+
+export ANDROID_HOME=~/Library/Android/sdk
+
 export EDITOR=vim
+export VISUAL=vim
+alias crontab="VIM_CRONTAB=true crontab"
 
-# Helpful tmux aliases for interacting with the system clipboard.
-alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
-alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export TERM=xterm-256color
 
