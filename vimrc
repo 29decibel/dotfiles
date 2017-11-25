@@ -26,6 +26,9 @@ Plug 'mxw/vim-jsx'
 " git
 Plug 'tpope/vim-fugitive'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 " ES6
 Plug 'isRuslan/vim-es6'
 

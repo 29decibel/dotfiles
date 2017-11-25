@@ -12,6 +12,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 echo Dotfiles
 ln -sf ${PWD}/vimrc ~/.vimrc
+mkdir -p ~/.config/nvim/
 ln -sf ${PWD}/vimrc ~/.config/nvim/init.vim
 ln -sf ${PWD}/gitconfig ~/.gitconfig
 ln -sf ${PWD}/tmux.conf ~/.tmux.conf

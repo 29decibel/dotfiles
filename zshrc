@@ -26,27 +26,19 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="/usr/local/Cellar/vim/7.3.502/bin:/Users/lidongbin/app_bins/todo.txt_cli-2.9:$PATH"
 
 eval "$(rbenv init -)"
 export BUNDLER_EDITOR=vim
 
-# some alias
-alias cdp='cap deploy:production'
-alias t='todo.sh -d /Users/lidongbin/app_bins/todo.txt_cli-2.9/todo.cfg'
-
-# for rails migration
-alias dbm='bundle exec rake db:auto:migrate'
-alias tdbm='RAILS_ENV=test bundle exec rake db:auto:migrate'
-alias be='bundle exec'
-
 # for tmux
 export EDITOR=vim
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # Helpful tmux aliases for interacting with the system clipboard.
 alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
 alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
 
-# tmux helper
-alias mux='tmuxinator'
+export TERM=xterm-256color
+
+# vim fzf
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
