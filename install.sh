@@ -31,3 +31,13 @@ brewInstallCopyPaste() {
 }
 
 brewInstallCopyPaste
+
+# install neovim python to fix the following issue 
+# UltiSnips requires py >= 2.7 or py3
+
+if hash brew 2>/dev/null; then
+    echo Install neovim dependencies.
+    pip install neovim
+else
+    echo Skip neovim dependencies.
+fi
