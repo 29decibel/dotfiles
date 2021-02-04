@@ -1,26 +1,42 @@
-#!/bin/sh
-
-echo Install vim-plug
+## Install Vim
+```bash
 # for vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+ln -sf ${PWD}/vimrc ~/.vimrc
 # for neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# install neovim deps
+# install neovim python to fix the following issue 
+# UltiSnips requires py >= 2.7 or py3
 
-echo Dotfiles
-ln -sf ${PWD}/vimrc ~/.vimrc
+pip install neovim
+
 mkdir -p ~/.config/nvim/
-ln -sf ${PWD}/zshrc ~/.zshrc
 ln -sf ${PWD}/vimrc ~/.config/nvim/init.vim
-ln -sf ${PWD}/gitconfig ~/.gitconfig
-ln -sf ${PWD}/tmux.conf ~/.tmux.conf
+
 ln -sf ${PWD}/ctags ~/.ctags
 ln -sf ${PWD}/custom-snippets ~/.vim/custom-snippets
+```
+
+## Gitconfig
+```bash
+ln -sf ${PWD}/gitconfig ~/.gitconfig
+```
+
+## Zsh
+
+```bash
+ln -sf ${PWD}/zshrc ~/.zshrc
+ln -sf ${PWD}/tmux.conf ~/.tmux.conf
+```
 
 
+## copy paste in tmux
+```bash
 brewInstallCopyPaste() {
   if hash brew 2>/dev/null; then
     echo Copy paste in tmux support
@@ -31,13 +47,5 @@ brewInstallCopyPaste() {
 }
 
 brewInstallCopyPaste
+```
 
-# install neovim python to fix the following issue 
-# UltiSnips requires py >= 2.7 or py3
-
-if hash brew 2>/dev/null; then
-    echo Install neovim dependencies.
-    pip install neovim
-else
-    echo Skip neovim dependencies.
-fi

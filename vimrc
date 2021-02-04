@@ -31,6 +31,10 @@ Plug 'prettier/vim-prettier', {
 Plug 'pangloss/vim-javascript'
 "Plug 'mxw/vim-jsx'
 
+" elixir
+Plug 'maralla/completor.vim'
+Plug 'slashmili/alchemist.vim'
+
 " mustache
 Plug 'mustache/vim-mustache-handlebars'
 
