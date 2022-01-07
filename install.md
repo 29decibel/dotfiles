@@ -22,6 +22,11 @@ ln -sf ${PWD}/ctags ~/.ctags
 ln -sf ${PWD}/custom-snippets ~/.vim/custom-snippets
 ```
 
+## NVIM
+```bash
+ln -sf ${PWD}/init.vim ~/.config/nvim/init.vim
+```
+
 ## Gitconfig
 ```bash
 ln -sf ${PWD}/gitconfig ~/.gitconfig

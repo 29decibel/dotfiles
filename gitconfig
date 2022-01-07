@@ -48,3 +48,5 @@
 	trustExitCode = true
 [merge]
 	ff = true
+[init]
+	defaultBranch = main
