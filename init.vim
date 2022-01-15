@@ -25,6 +25,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 
 Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 
 call plug#end()
 
@@ -62,3 +63,7 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+"elixir mix format
+let g:mix_format_on_save = 1
+
