@@ -42,6 +42,7 @@ Plug 'mustache/vim-mustache-handlebars'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'arcticicestudio/nord-vim'
 
 " Rails
 Plug 'tpope/vim-rails'
@@ -174,7 +175,7 @@ set background=dark
 let g:solarized_use16 = 1
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme solarized8
+colorscheme nord
 
 " high light search
 set hlsearch
