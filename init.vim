@@ -14,22 +14,40 @@ Plug 'adrian5/oceanic-next-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+Plug "arcticicestudio/nord-vim"
+
+" elm
+Plug "ElmCast/elm-vim"
+
+" c++
+Plug 'cdelledonne/vim-cmake'
 
 Plug 'preservim/nerdcommenter' 
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'dense-analysis/ale'
 
 Plug 'elixir-editors/vim-elixir'
+
 Plug 'mhinz/vim-mix-format'
 
 Plug 'tpope/vim-projectionist'
 
+" snippets is the best
+Plug 'honza/vim-snippets'
+
 call plug#end()
+
+" Elixir editor needs these
+" Enable syntax highlighting
+syntax on
 
 " no wrap please
 set nowrap
@@ -49,7 +67,7 @@ nmap <silent><leader>v :vsplit<CR>
 nmap <silent><leader>s :split<CR>
 
 """"""""""""""""" color
-colorscheme oceanicnext
+colorscheme nord
 
 " airline
 let g:airline_theme='night_owl'
@@ -69,3 +87,7 @@ autocmd BufReadPost *
 "elixir mix format
 let g:mix_format_on_save = 1
 
+
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+au BufRead,BufNewFile mix.lock set filetype=elixir
