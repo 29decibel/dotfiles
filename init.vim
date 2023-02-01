@@ -20,13 +20,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
-Plug "arcticicestudio/nord-vim"
+Plug 'arcticicestudio/nord-vim'
 
 " elm
-Plug "ElmCast/elm-vim"
-
-" c++
-Plug 'cdelledonne/vim-cmake'
+Plug 'ElmCast/elm-vim'
 
 Plug 'preservim/nerdcommenter' 
 
