@@ -12,6 +12,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 
 Plug 'adrian5/oceanic-next-vim'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -53,7 +54,7 @@ nmap <silent><leader>v :vsplit<CR>
 nmap <silent><leader>s :split<CR>
 
 """"""""""""""""" color
-colorscheme oceanicnext
+colorscheme nord
 
 " airline
 let g:airline_theme='night_owl'
