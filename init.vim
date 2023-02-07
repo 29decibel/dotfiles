@@ -9,6 +9,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'adrian5/oceanic-next-vim'
 
 Plug 'vim-airline/vim-airline'
@@ -28,6 +30,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 
 Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails'
 
 call plug#end()
 
@@ -35,6 +38,7 @@ call plug#end()
 set nowrap
 
 " fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let mapleader = "\\"
 nmap <silent><leader>t :Files<CR>
 

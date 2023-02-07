@@ -45,6 +45,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'arcticicestudio/nord-vim'
 
 " Rails
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 
 " git
