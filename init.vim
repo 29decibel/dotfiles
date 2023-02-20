@@ -2,9 +2,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'SirVer/ultisnips'
+Plug 'natebosch/dartlang-snippets'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plug 'junegunn/fzf.vim'
+
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -32,6 +36,8 @@ Plug 'mhinz/vim-mix-format'
 
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-rails'
+
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -62,6 +68,13 @@ let g:airline_theme='night_owl'
 " govim
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
+
+" mainly for dart
+"coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-flutter',
+  \ ]
 
 
 " remember last edit point
