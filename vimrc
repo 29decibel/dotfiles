@@ -70,6 +70,9 @@ Plug 'ajh17/Spacegray.vim' " https://github.com/ajh17/Spacegray.vim
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Fuzzy search
 " Put the following into .zshrc
 " export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -253,3 +256,6 @@ let g:ycm_enable_diagnostic_highlighting = 0
 " Don't show YCM's preview window [ I find it really annoying ]
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+
+" format rust
+let g:rustfmt_autosave = 1
