@@ -1,14 +1,13 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'SirVer/ultisnips'
-Plug 'natebosch/dartlang-snippets'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plug 'junegunn/fzf.vim'
 
-" Dart
-Plug 'dart-lang/dart-vim-plugin'
+" we still need this to make the magic happening
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
 
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -21,21 +20,34 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" typescript and js stuff, react of course
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 Plug 'preservim/nerdcommenter' 
 
+" coc the stuff makes everything ticks
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
-Plug 'dense-analysis/ale'
+" this is pretty slick, which makes prettier and eslint through coc as well
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
 
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
 
 Plug 'rust-lang/rust.vim'
 
@@ -43,6 +55,18 @@ call plug#end()
 
 " no wrap please
 set nowrap
+
+" coc make it display more stuff for us
+nnoremap <silent> K :call CocAction('doHover')<CR>
+
+" common bidings to go to for coc
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+" jumping between errors in the current file
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " fzf
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
